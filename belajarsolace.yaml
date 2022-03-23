@@ -1,9 +1,8 @@
-# docker-compose -f PubSubStandard_singleNode.yml u
 version: '3.3'
 
 services:
   primary:
-    container_name: belajarSolaceSingleNode
+    container_name: belajarSolace
     image: solace/solace-pubsub-standard:latest
     shm_size: 1g
     ulimits:
@@ -52,6 +51,6 @@ services:
       #SSH connection to CLI
       - '2222:2222'
     environment:
-      - username_admin_globalaccesslevel=belajar
-      - username_admin_password=belajar
+      - username_admin_globalaccesslevel=admin
+      - username_admin_password=admin
       - system_scaling_maxconnectioncount=100
